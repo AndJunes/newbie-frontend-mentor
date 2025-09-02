@@ -1,0 +1,162 @@
+.result-summary-card {
+  display: flex;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.result-section {
+  background: linear-gradient(to bottom, #7857ff, #2e2be9);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-title {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #4e21ca, #2421ca00);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.main-score {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.total {
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+.result-message {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.result-description {
+  opacity: 0.7;
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.summary-section {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.summary-items {
+  margin: 1.5rem 0;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.category-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-name {
+  font-weight: 700;
+}
+
+.actual-score {
+  font-weight: 800;
+}
+
+.total-score {
+  opacity: 0.5;
+}
+
+.continue-button {
+  background: #303b5a;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.3s ease;
+}
+
+.continue-button:hover {
+  background: linear-gradient(to bottom, #7857ff, #2e2be9);
+}
+
+/* Colores específicos para cada categoría */
+.category-reaction { 
+  background-color: #fff6f5; 
+}
+
+.category-reaction .category-name { 
+  color: #ff5757; 
+}
+
+.category-memory { 
+  background-color: #fffbf2; 
+}
+
+.category-memory .category-name { 
+  color: #ffb01f; 
+}
+
+.category-verbal { 
+  background-color: #f2fbfa; 
+}
+
+.category-verbal .category-name { 
+  color: #00bd91; 
+}
+
+.category-visual { 
+  background-color: #f3f3fd; 
+}
+
+.category-visual .category-name { 
+  color: #1125d4; 
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .result-summary-card {
+    flex-direction: column;
+  }
+  
+  .result-section {
+    border-radius: 0 0 20px 20px;
+  }
+}
