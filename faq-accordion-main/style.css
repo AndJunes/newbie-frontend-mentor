@@ -1,0 +1,195 @@
+/* =======================
+   VARIABLES DE DISEÑO
+   ======================= */
+:root {
+    /* Colores */
+    --color-white: hsl(0, 100%, 100%);
+    --color-purple-100: hsl(275, 100%, 97%);
+    --color-purple-600: hsl(292, 16%, 49%);
+    --color-purple-950: hsl(292, 42%, 14%);
+    
+    /* Tipografía */
+    --font-family-base: 'WorkSans', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Tamaños */
+    --font-size-body: 16px;
+}
+
+/* =======================
+   RESET Y ESTILOS BASE
+   ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-body);
+    color: var(--color-purple-950);
+    background-color: var(--color-purple-100);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 148px 24px 40px;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 232px;
+    background: url('./assets/images/background-pattern-mobile.svg') no-repeat center top;
+    background-size: cover;
+    z-index: 0;
+}
+
+/* =======================
+   FUENTES PERSONALIZADAS
+   ======================= */
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/static/WorkSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/static/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WorkSans';
+    src: url('./assets/fonts/static/WorkSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* =======================
+   CONTENEDOR PRINCIPAL
+   ======================= */
+main {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+section {
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 32px 56px 0 rgba(80, 0, 118, 0.1);
+}
+
+/* =======================
+   ENCABEZADO
+   ======================= */
+h1 {
+    font-weight: var(--font-weight-bold);
+    font-size: 32px;
+    color: var(--color-purple-950);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+/* =======================
+   ARTÍCULOS/FAQ
+   ======================= */
+article {
+    border-bottom: 1px solid var(--color-purple-100);
+    padding: 20px 0;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+article h2 {
+    font-weight: var(--font-weight-semibold);
+    font-size: 16px;
+    color: var(--color-purple-950);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+article h2:hover {
+    color: #AD28EB;
+}
+
+article p {
+    font-weight: var(--font-weight-regular);
+    font-size: 14px;
+    color: var(--color-purple-600);
+    line-height: 1.5;
+    margin-top: 24px;
+    display: none;
+}
+
+article.active p {
+    display: block;
+}
+
+article.active h2 img {
+    content: url('./assets/images/icon-minus.svg');
+}
+
+/* =======================
+   MEDIA QUERIES
+   ======================= */
+@media screen and (min-width: 768px) {
+    body::before {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+        height: 320px;
+    }
+    
+    body {
+        padding: 167px 24px 40px;
+        align-items: center;
+    }
+    
+    section {
+        padding: 40px;
+        border-radius: 16px;
+    }
+    
+    h1 {
+        font-size: 56px;
+        margin-bottom: 32px;
+    }
+    
+    article h2 {
+        font-size: 18px;
+    }
+    
+    article p {
+        font-size: 16px;
+    }
+}
+
+/* =======================
+   ESTADOS DE FOCO (accesibilidad)
+   ======================= */
+article h2:focus {
+    outline: 2px solid #AD28EB;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
