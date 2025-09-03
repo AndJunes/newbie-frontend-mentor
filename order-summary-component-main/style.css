@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #3829e0;
+  --secondary-color: #f5f7ff;
+  --text-color: #7280a7;
+  --dark-text: #1f2f56;
+  --background: #e0e8ff;
+  --white: #ffffff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--background);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card__header img {
+  width: 100%;
+  display: block;
+}
+
+.card__body {
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.card__title {
+  color: var(--dark-text);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.card__description {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.plan {
+  background-color: var(--secondary-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.plan__icon {
+  margin-right: 1rem;
+}
+
+.plan__details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.plan__name {
+  color: var(--dark-text);
+  font-size: 0.9rem;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+}
+
+.plan__price {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.plan__change {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.plan__change:hover {
+  color: #766cf1;
+  text-decoration: none;
+}
+
+.card__footer {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: white;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1rem 1rem rgba(56, 41, 224, 0.2);
+}
+
+.btn--primary:hover {
+  background-color: #766cf1;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.btn--secondary:hover {
+  color: var(--dark-text);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .card__body {
+    padding: 2.5rem 3rem 1.5rem;
+  }
+  
+  .card__footer {
+    padding: 0 3rem 2.5rem;
+  }
+}
